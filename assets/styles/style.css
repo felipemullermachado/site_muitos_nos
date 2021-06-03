@@ -226,11 +226,12 @@ header{
 }
 
 .contato .contato-info .logo-insta {
-    width: 100px;
+    width: 60px;
     margin: 30px 0;
     background: #f9f9f9;
     border-radius: 20px;
     border: 3px solid black;
+    box-sizing: border-box;
 }
 
 .contato .foto-artista{
