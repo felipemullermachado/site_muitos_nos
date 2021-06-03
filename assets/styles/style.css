@@ -10,7 +10,7 @@ img {
 
 body{
     font-family: 'Exo 2', sans-serif;
-    font-size: 10px;
+    font-size: 10px; /*Resolvi colocar 10px para facilitar arrumar as fontes*/
     color: #252525;
 }
 
@@ -18,12 +18,12 @@ body{
 /* FONTS */
 
 h3 {
-    font-size: 32px;
+    font-size: 3.2em;
     line-height: 60px;
 }
 
 p {
-   font-size: 18px;
+   font-size: 1.8em;
    line-height: 24px;
 }
 
@@ -32,12 +32,10 @@ p {
 
 .cabecalho h3 {
     font-size: 5em;
-    color: #252525;
     text-decoration: none;
     font-family: 'BigNoodleTitling';
     font-weight: 500;
-    margin-left: 10px;
-    line-height: 80px;
+    line-height: 80px;  /*Para que o título do Header não fique colado no topo do body*/
 }
 
 header{
@@ -54,16 +52,14 @@ header{
     height: 70px;
     position: fixed;
     background: #ffffff;
-    z-index: 100000;
-    box-shadow: 0 0 0 #252525;
+    z-index: 100000; /*Para que nenhum elemento fique acima, visto que está com position fixed*/
 }
 
 .nav{
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
     list-style: none;
-    max-width: 100%;
 }
 
 .nav li{
@@ -81,7 +77,7 @@ header{
 
 .nav li a:hover{
     color: #335c56;
-    font-weight: bold;
+    font-weight: 700;
     opacity: .9;
     transition: ease 1.5s;
 }
@@ -89,7 +85,6 @@ header{
 
 .titulo-principal{
     text-align: center;
-    color: #252525;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -118,56 +113,47 @@ header{
 /* SOBRE */
 
 .sobre{
-    height: 500px;
+    min-height: 500px;
     background: #ffffff;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     text-align: center;
-    max-height: 100%;
 }
 
 .sobre-container{
     height: 320px;
     width: 840px;
-    color: #252525;
     max-width: 100%;
 }
 
+
 .sobre-container h3{
-    font-size: 3.2em;
-    line-height: 38px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .sobre-container p{
     font-size: 2.4em;
     line-height: 32px;
-    margin-bottom: 40px;
+    max-width: 100%;
+    padding: 20px 10px;
 }
 
 
 /* PROJETOS */
 
 .projetos{
-    min-height: 1900px;
+    min-height: 1500px;
     background: #f9f9f9;
-}
-
-.projetos-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 30px;
+    padding: 30px 0;
     max-width: 100%;
-    z-index: 5;
 }
 
 .projetos-item{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 960px;
@@ -179,7 +165,14 @@ header{
 .projetos-info{
     max-width: 300px;
     margin: 0 20px 50px 0;
+    text-align: justify;
+    padding-left: 10px;
 }
+
+.projetos-info h3 {
+    font-weight: 600;
+}
+
 
 
 /* SLIDER CAROUSEL */
@@ -224,9 +217,15 @@ header{
     justify-content: space-around;
     align-items: center;
     max-width: 320px;
+    padding-top: 30px;
 }
 
-.contato .contato-info img {
+.contato .contato-info h3{
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.contato .contato-info .logo-insta {
     width: 100px;
     margin: 30px 0;
     background: #f9f9f9;
@@ -234,7 +233,7 @@ header{
     border: 3px solid black;
 }
 
-.contato article img{
+.contato .foto-artista{
     height: 270px;
     width: auto;
     margin-bottom: 30px;
@@ -249,7 +248,6 @@ footer{
 
 footer p{
     font-weight: 500;
-    color: #252525;
     text-align: center;
     padding-top: 15px;
 }
@@ -263,11 +261,13 @@ footer p{
     }
 }
 
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 949px){
     
     .projetos-item{
+        justify-content: space-around;
         max-width: 100%;
     }
+
 }
 
 @media only screen and (max-width: 750px){
@@ -299,7 +299,7 @@ footer p{
 
 @media only screen and (max-width: 650px){
     .sobre-container p, .projetos-item p{
-        font-size: 18px !important;
+        font-size: 1.8em;
     }
 }
 
@@ -307,9 +307,5 @@ footer p{
 @media only screen and (max-width: 355px){
     .titulo-principal{
         height: 110px;
-    }
-
-    .projetos-container{
-        padding-top: 0;
     }
 }
