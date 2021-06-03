@@ -174,12 +174,12 @@ header{
 }
 
 
-
 /* SLIDER CAROUSEL */
 
 .slider{
     max-width: 600px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .slick-slide{
@@ -238,6 +238,7 @@ header{
     width: auto;
     margin-bottom: 30px;
 }
+
 
 /* FOOTER */
 
